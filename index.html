@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pari portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/38911adac8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">My Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1><span>Parinitha P<p>3<sup>rd</sup> year CSE undergrad</p>NMIT Bengaluru</span><br>
+                    </h1>
+                </div>
+            </div>
+    </div>
+ <!------------about-------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                        <img src="wordart.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1><br>
+                    <p>Hello! I'm Parinitha. I am a passionate learner in the field of AI/ML and cloud computing(AWS).I am currently learning Java and i am ready to embark on an internship journey that will develop my abilities and propel me towards my
+                    career goals. I look forward to connecting with potential mentors and organizations that value growth, learning, and innovation.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">projects</p>
+                        <p class="tab-links" onclick="opentab('education')">education</p>
+                    </div> 
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>python</li>
+                            <li>java, javafx</li>
+                            <li>c, c++</li>  
+                            <li>javascript</li>
+                            <li>html, css</li>
+                        </ul>
+                    </div>    
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>C++ </span><br>Hospital Management System</li>
+                            <li><span>Web </span><br>Portfolio</li>
+                            <li><span>javafx, MySQL, JDBC </span><br>Travel Agency</li>
+                        </ul>
+                    </div>  
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>BE CSE</span> (NMIT) <br>CGPA:8.56</li>
+                            <li><span>PUC</span> (SURANA IND PU COLLEGE)<br>Grade:92.6%</li>
+                            <li><span>10<sup>th</sup></span> (KENDRIYA VIDYALAYA)<br>Grade:88.8%</li>   
+                        </ul>
+                    </div>
+                </div>  
+            </div> 
+        </div>
+    </div>    
+ <!----portfolio--->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="hospital.png">  
+                    <div class="layer">
+                        <h3>Hospital Management System</h3>
+                        <a href="https://github.com/Pariprabhu29/c-plus-plus-project.git"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div> 
+                </div>
+                <div class="work">
+                        <img src="travel.png"> 
+                        <div class="layer">
+                            <h3>Travel Agency</h3>
+                            <a href="https://github.com/Pariprabhu29/JAVA-GIT.git"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>  
+                    </div>
+                    <div class="work">
+                        <img src="portfoliopic.png">  
+                        <div class="layer">
+                            <h3>Portfolio</h3>
+                            <a href="#header" ><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a> 
+                        </div>    
+                    </div>
+                </div>
+                <a href="https://github.com/Pariprabhu29?tab=repositories" class="btn">seemore</a>
+            </div>
+        </div>
+        <!--------contact--------->
+        <div id="contact">
+            <div class="container">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="content"><br>
+                <p><i class="fa-solid fa-paper-plane"></i> 1nt20cs124.parinitha@nmit.ac.in<br><br>
+                <button id="copyEmailButton" onclick="copyEmail()">Copy Email</button></p>
+                <div class="social-icons">
+                    <a href="linkedin.com/in/parinitha-p-807163243"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Pariprabhu29"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="PARINITHA P RESUME.pdf" download class="btn btn2" >Download CV</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for (tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>       
+               
+        <script>
+            function copyEmail() {
+                var email = '1nt20cs124.parinitha@nmit.ac.in';
+                var textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert('Email copied');
+            }
+        </script>
+    </body>
+</HTML>
